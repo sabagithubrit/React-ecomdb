@@ -72,7 +72,7 @@ function AddProduct() {
       data.append("file", file);
 
       const res = await axios.post(
-        "http://sabaecom.duckdns.org/api/admin/add-item",
+        "https://sabaecom.duckdns.org/api/admin/add-item",
         data,
         {
           withCredentials: true,

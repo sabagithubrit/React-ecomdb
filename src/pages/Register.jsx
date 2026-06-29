@@ -29,8 +29,8 @@ function Register() {
   });
   const url =
     role === "admin"
-      ? "http://sabaecom.duckdns.org/api/admin/register"
-      : "http://sabaecom.duckdns.org/api/user/register";
+      ? "https://sabaecom.duckdns.org/api/admin/register"
+      : "https://sabaecom.duckdns.org/api/user/register";
 
   const payload =
     role === "admin"
@@ -83,8 +83,8 @@ function Register() {
   try {
     const url =
       role === "admin"
-        ? "http://sabaecom.duckdns.org/api/admin/register"
-        : "http://sabaecom.duckdns.org/api/user/register";
+        ? "https://sabaecom.duckdns.org/api/admin/register"
+        : "https://sabaecom.duckdns.org/api/user/register";
 
     const payload =
       role === "admin"

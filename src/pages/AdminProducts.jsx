@@ -11,7 +11,7 @@ function AdminProducts() {
     try {
 
       const res = await axios.get(
-        "http://sabaecom.duckdns.org/api/admin/items",
+        "https://sabaecom.duckdns.org/api/admin/items",
         {
           withCredentials: true
         }
@@ -29,7 +29,7 @@ function AdminProducts() {
     try {
 
       const res = await axios.delete(
-        `http://sabaecom.duckdns.org/api/admin/delete-item/${id}`,
+        `https://sabaecom.duckdns.org/api/admin/delete-item/${id}`,
         {
           withCredentials: true
         }

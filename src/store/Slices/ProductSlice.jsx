@@ -2,7 +2,7 @@ import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 export const fetchProducts=createAsyncThunk(
    "products/fetchProducts",async function(){
-   const res=await axios.get(' http://sabaecom.duckdns.org/api/products')
+   const res=await axios.get(' https://sabaecom.duckdns.org/api/products')
     console.log(res.data)
        return res.data
       

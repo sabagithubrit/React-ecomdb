@@ -15,7 +15,7 @@ function MyOrders() {
     async function fetchOrders() {
         try {
             const res = await axios.get(
-                "http://sabaecom.duckdns.org/api/myorders",
+                "https://sabaecom.duckdns.org/api/myorders",
                 {
                     withCredentials: true
                 }
@@ -76,7 +76,7 @@ function MyOrders() {
                                 <div className="col-3">
                                      <a
                                     className="btn btn-success btn-sm"
-                                    href={`http://sabaecom.duckdns.org/api/invoice/${order.orderid}`}
+                                    href={`https://sabaecom.duckdns.org/api/invoice/${order.orderid}`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >

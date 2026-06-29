@@ -25,7 +25,7 @@ function Payment() {
 
       // STEP 1: CREATE ORDER
       const orderRes = await axios.post(
-        "http://sabaecom.duckdns.org/api/payment/create-order",
+        "https://sabaecom.duckdns.org/api/payment/create-order",
         type === "cart"
           ? { type: "cart" }
           : { type: "single", itemid, quantity },
@@ -46,7 +46,7 @@ function Payment() {
         handler: async function (response) {
           try {
             const verifyRes = await axios.post(
-              "http://sabaecom.duckdns.org/api/payment/verify",
+              "https://sabaecom.duckdns.org/api/payment/verify",
               type === "cart"
                 ? {
                     razorpay_payment_id: response.razorpay_payment_id,

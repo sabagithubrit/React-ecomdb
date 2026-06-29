@@ -37,8 +37,8 @@ if (!tokenFromRegister) {
   try {
     const url =
       role === "admin"
-        ? "http://sabaecom.duckdns.org/api/admin/verify-otp"
-        : "http://sabaecom.duckdns.org/api/user/verify-otp";
+        ? "https://sabaecom.duckdns.org/api/admin/verify-otp"
+        : "https://sabaecom.duckdns.org/api/user/verify-otp";
 
     const payload = {
       otp: otpData.otp,

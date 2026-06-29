@@ -12,7 +12,7 @@ function SingleProduct() {
     try {
 
       const res = await axios.get(
-        `http://sabaecom.duckdns.org/api/admin/item/${id}`,
+        `https://sabaecom.duckdns.org/api/admin/item/${id}`,
         {
           withCredentials: true
         }

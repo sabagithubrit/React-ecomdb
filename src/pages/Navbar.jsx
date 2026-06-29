@@ -36,7 +36,7 @@ function Navbar() {
 
       if (user) {
         await fetch(
-          "http://sabaecom.duckdns.org/api/user/logout",
+          "https://sabaecom.duckdns.org/api/user/logout",
           {
             credentials: "include"
           }

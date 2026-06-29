@@ -55,8 +55,8 @@ function Login() {
     try {
       const url =
         role === "admin"
-          ? "http://sabaecom.duckdns.org/api/admin/login"
-          : "http://sabaecom.duckdns.org/api/user/login";
+          ? "https://sabaecom.duckdns.org/api/admin/login"
+          : "https://sabaecom.duckdns.org/api/user/login";
 
       const payload =
         role === "admin"

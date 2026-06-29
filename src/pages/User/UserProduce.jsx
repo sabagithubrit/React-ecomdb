@@ -25,7 +25,7 @@ function UserProduce() {
   async function fetchProducts() {
     try {
       const res = await axios.get(
-        "http://sabaecom.duckdns.org/api/products"
+        "https://sabaecom.duckdns.org/api/products"
       );
       const data = res.data.products || res.data;
       setProducts(data);
@@ -84,7 +84,7 @@ function UserProduce() {
     const quantity = qtyMap[itemid] || 1;
 
     const res = await axios.post(
-      "http://sabaecom.duckdns.org/api/cart/add",
+      "https://sabaecom.duckdns.org/api/cart/add",
       { itemid, quantity },
       { withCredentials: true }
     );

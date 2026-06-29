@@ -45,7 +45,7 @@ function EditProduct() {
     try {
 
       const res = await axios.get(
-        `http://sabaecom.duckdns.org/api/admin/item/${id}`,
+        `https://sabaecom.duckdns.org/api/admin/item/${id}`,
         {
           withCredentials: true
         }
@@ -105,7 +105,7 @@ function EditProduct() {
       }
 
       const res = await axios.put(
-        `http://sabaecom.duckdns.org/api/admin/update-item/${id}`,
+        `https://sabaecom.duckdns.org/api/admin/update-item/${id}`,
         data,
         {
           withCredentials: true

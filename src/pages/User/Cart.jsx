@@ -14,7 +14,7 @@ function Cart() {
     try {
       setLoading(true);
       const res = await axios.get(
-        "http://sabaecom.duckdns.org/api/cart/view",
+        "https://sabaecom.duckdns.org/api/cart/view",
         { withCredentials: true }
       );
       setCartItems(res.data.cart_items || []);
@@ -37,7 +37,7 @@ function Cart() {
     if (quantity <= 0) return;
     try {
       await axios.put(
-        "http://sabaecom.duckdns.org/api/cart/update",
+        "https://sabaecom.duckdns.org/api/cart/update",
         { itemid, quantity },
         { withCredentials: true }
       );
@@ -50,7 +50,7 @@ function Cart() {
   async function removeItem(itemid) {
     try {
       await axios.delete(
-        `http://sabaecom.duckdns.org/api/cart/delete/${itemid}`,
+        `https://sabaecom.duckdns.org/api/cart/delete/${itemid}`,
         { withCredentials: true }
       );
       fetchCart();

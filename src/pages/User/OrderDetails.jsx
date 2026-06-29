@@ -15,7 +15,7 @@ function OrderDetails() {
   async function fetchOrder() {
     try {
       const res = await axios.get(
-        `http://sabaecom.duckdns.org/api/orders/${orderid}`,
+        `https://sabaecom.duckdns.org/api/orders/${orderid}`,
         {
           withCredentials: true
         }
