@@ -11,6 +11,8 @@ function Payment() {
   const type = location.state?.type; // "cart" or "single"
   const itemid = location.state?.itemid;
   const quantity = location.state?.quantity || 1;
+  console.log("Quantity =", quantity);
+  console.log("State =", location.state);
 
   useEffect(() => {
     const script = document.createElement("script");
