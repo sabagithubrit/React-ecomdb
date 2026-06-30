@@ -16,8 +16,9 @@ function AdminProducts() {
           withCredentials: true
         }
       );
+      console.log(res.data);
 
-      setProducts(res.data.products || res.data);
+      setProducts(res.data.products || []);
 
     } catch (error) {
       console.log(error.response?.data || error.message);
