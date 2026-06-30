@@ -27,27 +27,28 @@ function Navbar() {
   }
 
 
-
   async function logout() {
     try {
       if (admin) {
+        await fetch("https://sabaecom.duckdns.org/api/admin/logout", {
+          method: "POST",
+          credentials: "include",
+        });
+  
         localStorage.removeItem("admin");
       }
-
+  
       if (user) {
-        await fetch(
-          "https://sabaecom.duckdns.org/api/user/logout",
-          {
-            credentials: "include"
-          }
-        );
-
+        await fetch("https://sabaecom.duckdns.org/api/user/logout", {
+          method: "POST",
+          credentials: "include",
+        });
+  
         localStorage.removeItem("user");
       }
-
+  
       setAdmin(null);
       setUser(null);
-
       navigate("/login");
     } catch (error) {
       console.log(error);
