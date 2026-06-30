@@ -19,7 +19,7 @@ function UserProduce() {
   { label: "Fashion",          value: "Fashion" },
   { label: "Electronics",      value: "Electronics" },
   { label: "Sports",           value: "Sports" },
-  { label: "Toys",             value: "Toys" },
+  { label: "Toys",             value: "toys" },
 ];
 
   async function fetchProducts() {
