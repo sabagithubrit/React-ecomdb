@@ -103,6 +103,15 @@ function handleQtyChange(itemid, value) {
 async function handleBuyNow(product) {
   try {
     const quantity = qtyMap[product.itemid] || 1;
+    await axios.post("https://sabaecom.duckdns.org/api/buy_now",
+    {
+      itemid:product.itemid,
+      quantity: quantity
+    },
+    {
+      withCredentials: true
+    }
+    );
 
     navigate("/payment", {
       state: {
@@ -113,7 +122,7 @@ async function handleBuyNow(product) {
     });
 
   } catch (error) {
-    alert("Buy Now Failed");
+    alert(error.response?.data?.message||"Buy Now Failed");
   }
 }
     
