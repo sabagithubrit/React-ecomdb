@@ -16,9 +16,10 @@ function AdminProducts() {
           withCredentials: true
         }
       );
-      console.log(res.data);
+      console.log("2.API response:",res.data);
 
       setProducts(res.data.products || []);
+      console.log("3.products set");
 
     } catch (error) {
       console.log(error.response?.data || error.message);
@@ -48,6 +49,8 @@ function AdminProducts() {
   useEffect(() => {
     getProducts();
   }, []);
+  console.log("Products state:", products);
+
 
   return (
     <>
